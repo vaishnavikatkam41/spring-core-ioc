@@ -1,26 +1,18 @@
 package com.klu;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Course {
-    private String courseName;
-    private int duration;   // duration in months
 
-    // Constructor Injection
-    public Course(String courseName, int duration) {
-        this.courseName = courseName;
-        this.duration = duration;
-    }
-
-    // Getters
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
+    private int id = 301;
+    private String course = "Spring Core";
+    private String dateOfCompletion = "25-Jan-2026";
 
     @Override
     public String toString() {
-        return courseName + " (" + duration + " months)";
+        return "Course [id=" + id +
+               ", course=" + course +
+               ", dateOfCompletion=" + dateOfCompletion + "]";
     }
 }
